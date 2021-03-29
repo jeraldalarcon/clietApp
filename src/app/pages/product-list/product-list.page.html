@@ -1,0 +1,55 @@
+<ion-header class="ion-no-border" >
+  <ion-toolbar class="ion-padding-start ion-padding-end">
+    <ion-title class="ion-no-padding ion-text-left">
+      <ion-icon name="list-outline">
+      </ion-icon>
+      Product list
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list class="ion-no-padding">
+    <ion-item lines="none">
+      <ion-card>
+        <ion-grid >
+          <ion-row>
+            <ion-col size="3" class="ion-no-padding ion-no-margin" >
+              <img class="prod-image " style="width: 100%; height: 100%;" src="https://api.time.com/wp-content/uploads/2018/04/strawberries.jpg?w=800&quality=85">
+            </ion-col>
+            <ion-col size ="8">
+                <ion-row>
+                  <ion-col >
+                    <h5 class="ion-no-padding ion-no-margin"><b>strawberries</b></h5>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col class="ion-no-padding ">
+                    <ion-row >
+                      <ion-col class="ion-no-padding ">Price</ion-col>
+                    </ion-row>
+                    <ion-row >
+                      <ion-col class="ion-no-padding " style="font-weight: 600;">100</ion-col>
+                    </ion-row>
+                  </ion-col>
+                  <ion-col class="ion-no-padding ">
+                    <ion-row >
+                      <ion-col class="ion-no-padding ">Total</ion-col>
+                    </ion-row>
+                    <ion-row >
+                      <ion-col class="ion-no-padding " style="font-weight: 600;">100</ion-col>
+                    </ion-row>
+                  </ion-col>
+                </ion-row>
+            </ion-col>
+            <ion-col size="1">
+              <ion-button (click)="presentActionSheet()"  class="ion-float-right"><ion-icon name="add-outline"></ion-icon></ion-button>
+              <!-- <ion-input type="number" value="333"></ion-input> -->
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

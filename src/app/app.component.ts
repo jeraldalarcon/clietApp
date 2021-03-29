@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { Platform } from '@ionic/angular';
+import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { LottieSplashScreen } from '@ionic-native/lottie-splash-screen/ngx';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +10,30 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  constructor(
+    private platform: Platform,
+    private splashScreen: SplashScreen,
+    private statusBar: StatusBar,
+    private lottieSplashScreen: LottieSplashScreen
+  ) {
+    platform.ready().then(()=> {
+      this.lottieSplashScreen.show('https://assets6.lottiefiles.com/packages/lf20_12G4mZ.json', false, 1024, 768)
+    })
+
+    this.initializeApp();
+  }
+
+  initializeApp() {
+    this.platform.ready().then(() => {
+
+      this.statusBar.styleDefault();
+      // this.splashScreen.hide();  // WE DONE NEED THIS
+
+      setTimeout(() => {
+        this.lottieSplashScreen.hide()
+      }, 4000);
+
+
+    });
+  }
 }
