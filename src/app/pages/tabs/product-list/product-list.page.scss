@@ -1,3 +1,16 @@
 .prod-image {
   border-radius: 8px;
 }
+
+
+.my-custom-class{
+  color: rgb(190, 226, 31);
+}
+
+.my-custom-modal-css .modal-wrapper {
+  height: 20%;
+  top: 80%;
+  position: absolute;
+  display: block;
+  background-color: red;
+}

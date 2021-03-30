@@ -29,9 +29,9 @@ export class AppComponent {
       this.statusBar.styleDefault();
       // this.splashScreen.hide();  // WE DONE NEED THIS
 
-      setTimeout(() => {
-        this.lottieSplashScreen.hide()
-      }, 4000);
+      // setTimeout(() => {
+      //   this.lottieSplashScreen.hide()
+      // }, 4000);
 
 
     });

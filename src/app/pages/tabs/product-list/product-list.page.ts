@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActionSheetController } from '@ionic/angular';
+import { ModalController } from '@ionic/angular';
+import { MyModalPage } from 'src/app/modals/my-modal/my-modal.page';
+
 
 @Component({
   selector: 'app-product-list',
@@ -7,9 +10,11 @@ import { ActionSheetController } from '@ionic/angular';
   styleUrls: ['./product-list.page.scss'],
 })
 export class ProductListPage implements OnInit {
+  dataReturned: any;
 
   constructor(
-    public actionSheetController: ActionSheetController
+    public actionSheetController: ActionSheetController,
+    public modalController: ModalController,
   ) { }
 
   ngOnInit() {
@@ -27,33 +32,36 @@ export class ProductListPage implements OnInit {
           console.log('Delete clicked');
         }
       }, {
-        text: 'Share',
-        icon: 'share',
-        handler: () => {
-          console.log('Share clicked');
-        }
-      }, {
         text: 'Play (open modal)',
         icon: 'caret-forward-circle',
         handler: () => {
           console.log('Play clicked');
         }
-      }, {
-        text: 'Favorite',
-        icon: 'heart',
-        handler: () => {
-          console.log('Favorite clicked');
-        }
-      }, {
-        text: 'Cancel',
-        icon: 'close',
-        role: 'cancel',
-        handler: () => {
-          console.log('Cancel clicked');
-        }
       }]
     });
     await actionSheet.present();
   }
+
+  async openModal() {
+    const modal = await this.modalController.create({
+      component: MyModalPage,
+      cssClass: 'my-custom-class',
+      componentProps: {
+        "paramID": 123,
+        "paramTitle": "Test Title"
+      }
+    });
+
+    modal.onDidDismiss().then((dataReturned) => {
+      if (dataReturned !== null) {
+        this.dataReturned = dataReturned.data;
+        //alert('Modal Sent Data :'+ dataReturned);
+      }
+    });
+
+    return await modal.present();
+  }
+
+
 
 }
