@@ -45,7 +45,7 @@ export class ProductListPage implements OnInit {
   async openModal() {
     const modal = await this.modalController.create({
       component: MyModalPage,
-      cssClass: 'my-custom-class',
+      cssClass: 'my-custom-modal-css',
       componentProps: {
         "paramID": 123,
         "paramTitle": "Test Title"

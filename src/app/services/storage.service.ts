@@ -54,4 +54,22 @@ export class StorageService {
       return this.storage.set(ITEMS_KEY, newItems);
     })
   }
+
+  deleteItem(item: Item): Promise<any> {
+    return this.storage.get(ITEMS_KEY).then((items:Item[]) => {
+      if(!items || items.length === 0) {
+        return null;
+      }
+
+      let toKeep: Item[] = [];
+
+      for(let i of items){
+        if(i.id === item.id){
+          toKeep.push(item);
+        }
+      }
+
+      return this.storage.set(ITEMS_KEY, toKeep);
+    })
+  }
 }
