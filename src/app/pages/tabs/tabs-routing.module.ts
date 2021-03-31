@@ -5,13 +5,26 @@ import { TabsPage } from './tabs.page';
 
 const routes: Routes = [
   {
-    path: '',
-    component: TabsPage
+    path: 'tabs',
+    component: TabsPage,
+    children: [
+      {
+        path: 'product-list',
+        loadChildren: () => import('./product-list/product-list.module').then( m => m.ProductListPageModule)
+      },
+      {
+        path: '',
+        redirectTo: '/tabs/product-list',
+        pathMatch: 'full'
+      }
+    ]
   },
   {
-    path: 'product-list',
-    loadChildren: () => import('./product-list/product-list.module').then( m => m.ProductListPageModule)
-  },
+    path: '',
+    redirectTo: '/tabs/product-list',
+    pathMatch: 'full'
+  }
+
 ];
 
 @NgModule({
