@@ -7,4 +7,15 @@
   color: rgb(190, 226, 31);
 }
 
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  display: block;
+}
+
+.button-style  {
+  --border-radius:20px;
+}
+
 
