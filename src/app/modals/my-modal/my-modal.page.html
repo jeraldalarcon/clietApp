@@ -6,7 +6,7 @@
 
 <ion-content class="ion-padding my-custom-modal-css "style="background-color:blue">
 
-  <ion-grid >
+  <!-- <ion-grid >
     <ion-row>
       <ion-col text-center>
         ID : {{modelId}}
@@ -17,6 +17,38 @@
         <ion-button (click)="closeModal()">Close Modal</ion-button>
       </ion-col>
     </ion-row>
+  </ion-grid> -->
+  <ion-grid class="ion-no-padding ion-margin-bottom">
+    <ion-row >
+      <ion-col>
+        <img class="prod-image center" style="width: 80%; height: 100%;" src="https://www.applesfromny.com/wp-content/uploads/2020/05/Jonagold_NYAS-Apples2.png">
+      </ion-col>
+      <ion-col>
+        <div class="ion-text-center">
+          <b><h6 class="h6-style">strawberries</h6></b>
+          <ion-row>
+            <ion-col>
+              <ion-row >
+                <ion-col class="ion-no-padding ">Price</ion-col>
+              </ion-row>
+              <ion-row >
+                <ion-col class="ion-no-padding " style="font-weight: 600;">100</ion-col>
+              </ion-row>
+            </ion-col>
+              </ion-row>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-button style="border-radius: 23px;" (click)="openModal()"  class="ion-float-right button-style center ">
+        <!-- <ion-icon name="add-outline"></ion-icon> -->
+        ADD
+      </ion-button>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <ion-button (click)="closeModal()">Close Modal</ion-button>
+      </ion-col>
+    </ion-row>
   </ion-grid>
-
 </ion-content>

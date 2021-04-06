@@ -7,10 +7,11 @@
   color: rgb(190, 226, 31);
 }
 
+
 .center {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10px;
+  margin-top: 20px;
   display: block;
 }
 
@@ -19,3 +20,24 @@
 }
 
 
+.selector-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.h6-style {
+  font-weight: bolder;
+  color: #000000;
+    font-family: monospace;
+    font-size: 1.01em;
+}
+
+// ion-content{
+
+//   --ion-background-color:#f2f2f2;
+// }
+
+ion-card {
+  --background: #b6e8ffb8 !important;
+}

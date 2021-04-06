@@ -47,8 +47,8 @@ export class ProductListPage implements OnInit {
       component: MyModalPage,
       cssClass: 'my-custom-modal-css',
       componentProps: {
-        "paramID": 123,
-        "paramTitle": "Test Title"
+        "paramID": 123456,
+        "paramTitle": "Title ko"
       }
     });
 

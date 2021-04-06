@@ -9,42 +9,36 @@
 </ion-header>
 
 <ion-content>
-  <ion-list class="ion-no-padding">
+  <ion-list class="">
     <ion-grid class="ion-no-padding ion-no-margin">
       <ion-row>
         <ion-col size="6">
           <ion-item lines="none">
-            <ion-card style="margin:1px">
-              <ion-grid >
+            <ion-card style="margin:10px">
+              <ion-grid class="ion-no-padding ion-margin-bottom">
                 <ion-row >
-                  <img class="prod-image center" style="width: 60%; height: 100%;" src="https://api.time.com/wp-content/uploads/2018/04/strawberries.jpg?w=800&quality=85">
+                  <img class="prod-image center" style="width: 80%; height: 100%;" src="https://www.applesfromny.com/wp-content/uploads/2020/05/Jonagold_NYAS-Apples2.png">
+                </ion-row>
+                <ion-row >
+                  <ion-col>
+                    <div class="ion-text-center">
+                      <b><h6 class="h6-style">strawberries</h6></b>
+                      <ion-row>
+                        <ion-col>
+                          <ion-row >
+                            <ion-col class="ion-no-padding ">Price</ion-col>
+                          </ion-row>
+                          <ion-row >
+                            <ion-col class="ion-no-padding " style="font-weight: 600;">100</ion-col>
+                          </ion-row>
+                        </ion-col>
+                          </ion-row>
+                    </div>
+                  </ion-col>
                 </ion-row>
                 <ion-row>
-                  <ion-col >
-                    <b style="font-size:1.1rem"><h6>strawberries</h6></b>
-                  </ion-col>
-                </ion-row>
-                <ion-row>
-                  <ion-col>
-                    <ion-row >
-                      <ion-col class="ion-no-padding ">Price</ion-col>
-                    </ion-row>
-                    <ion-row >
-                      <ion-col class="ion-no-padding " style="font-weight: 600;">100</ion-col>
-                    </ion-row>
-                  </ion-col>
-                  <ion-col>
-                    <ion-row >
-                      <ion-col class="ion-no-padding ">Total</ion-col>
-                    </ion-row>
-                    <ion-row >
-                      <ion-col class="ion-no-padding " style="font-weight: 600;">100</ion-col>
-                    </ion-row>
-                  </ion-col>
-                    </ion-row>
-                <ion-row>
-                  <ion-button style="border-radius: 23px;" (click)="openModal()"  class="ion-float-right button-style center">
-                    <ion-icon name="add-outline"></ion-icon>
+                  <ion-button style="border-radius: 23px;" (click)="openModal()"  class="ion-float-right button-style center ">
+                    <!-- <ion-icon name="add-outline"></ion-icon> -->
                     ADD
                   </ion-button>
                 </ion-row>
@@ -52,87 +46,10 @@
             </ion-card>
           </ion-item>
         </ion-col>
-        <ion-col size="6">
-          <ion-item lines="none">
-            <ion-card style="margin:1px">
-              <ion-grid >
-                <ion-row >
-                  <img class="prod-image center" style="width: 60%; height: 100%;" src="https://api.time.com/wp-content/uploads/2018/04/strawberries.jpg?w=800&quality=85">
-                </ion-row>
-                <ion-row>
-                  <ion-col >
-                    <b style="font-size:1.1rem"><h6>strawberries</h6></b>
-                  </ion-col>
-                </ion-row>
-                <ion-row>
-                  <ion-col>
-                    <ion-row >
-                      <ion-col class="ion-no-padding ">Price</ion-col>
-                    </ion-row>
-                    <ion-row >
-                      <ion-col class="ion-no-padding " style="font-weight: 600;">100</ion-col>
-                    </ion-row>
-                  </ion-col>
-                  <ion-col>
-                    <ion-row >
-                      <ion-col class="ion-no-padding ">Total</ion-col>
-                    </ion-row>
-                    <ion-row >
-                      <ion-col class="ion-no-padding " style="font-weight: 600;">100</ion-col>
-                    </ion-row>
-                  </ion-col>
-                    </ion-row>
-                <ion-row>
-                  <ion-button style="border-radius: 23px;" (click)="openModal()"  class="ion-float-right button-style center">
-                    <ion-icon name="add-outline"></ion-icon>
-                    ADD
-                  </ion-button>
-                </ion-row>
-              </ion-grid>
-            </ion-card>
-          </ion-item>
-        </ion-col>
+
       </ion-row>
     </ion-grid>
-    <!-- <ion-item lines="none">
-      <ion-card>
-        <ion-grid >
-          <ion-row>
-            <ion-col size="3" class="ion-no-padding ion-no-margin" >
-              <img class="prod-image " style="width: 100%; height: 100%;" src="https://api.time.com/wp-content/uploads/2018/04/strawberries.jpg?w=800&quality=85">
-            </ion-col>
-            <ion-col size ="8">
-                <ion-row>
-                  <ion-col >
-                    <h5 class="ion-no-padding ion-no-margin"><b>strawberries</b></h5>
-                  </ion-col>
-                </ion-row>
-                <ion-row>
-                  <ion-col class="ion-no-padding ">
-                    <ion-row >
-                      <ion-col class="ion-no-padding ">Price</ion-col>
-                    </ion-row>
-                    <ion-row >
-                      <ion-col class="ion-no-padding " style="font-weight: 600;">100</ion-col>
-                    </ion-row>
-                  </ion-col>
-                  <ion-col class="ion-no-padding ">
-                    <ion-row >
-                      <ion-col class="ion-no-padding ">Total</ion-col>
-                    </ion-row>
-                    <ion-row >
-                      <ion-col class="ion-no-padding " style="font-weight: 600;">100</ion-col>
-                    </ion-row>
-                  </ion-col>
-                </ion-row>
-            </ion-col>
-            <ion-col size="1">
-              <ion-button (click)="openModal()"  class="ion-float-right"><ion-icon name="add-outline"></ion-icon></ion-button>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </ion-card>
-    </ion-item> -->
+
 
   </ion-list>
 </ion-content>
