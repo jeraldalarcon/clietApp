@@ -4,6 +4,7 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { LottieSplashScreen } from '@ionic-native/lottie-splash-screen/ngx';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -24,14 +25,15 @@ export class AppComponent {
   }
 
   initializeApp() {
+    this.lottieSplashScreen.show();
+
     this.platform.ready().then(() => {
 
       this.statusBar.styleDefault();
-      // this.splashScreen.hide();  // WE DONE NEED THIS
 
-      // setTimeout(() => {
-      //   this.lottieSplashScreen.hide()
-      // }, 4000);
+      setTimeout(() => {
+        this.lottieSplashScreen.hide()
+      }, 4000);
 
 
     });
